@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_homeNextFragment"
+            app:destination="@id/homeNextFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeNextFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.HomeNextFragment"
+        android:label="@string/title_home_next"
+        tools:layout="@layout/fragment_home_next" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_accountNextFragment"
+            app:destination="@id/accountNextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsNextFragment"
+            app:destination="@id/settingsNextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountNextFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.AccountNextFragment"
+        android:label="@string/title_account_next"
+        tools:layout="@layout/fragment_account_next" />
+    <fragment
+        android:id="@+id/settingsNextFragment"
+        android:name="com.indialone.drawerjetpacknavdemo.SettingsNextFragment"
+        android:label="@string/title_settings_next"
+        tools:layout="@layout/fragment_settings_next" />
+</navigation>
